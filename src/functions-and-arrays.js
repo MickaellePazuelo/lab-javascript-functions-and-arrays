@@ -8,17 +8,22 @@ function maxOfTwoNumbers(num1, num2) {
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
-function findLongestWord(arrOfWords) {
-  if (!arrOfWords.length) return null;
-  if (arrOfWords.length === 1) return arrOfWords[0];
-  let largestword = arrOfWords[0];
-  for (let word of arrOfWords) {
-    if (word.length > largestword.length) {
-      largestword = word;
-    }
-  }
-  return largestword;
+function findLongestWord(words){
+  var longestWord=' ';
+  if(words.length === 0){
+    return null;
+  } else if (words.length ===1){
+    return words[words.length-1];}
+for(var i=0; i< words.length; i++){
+  longestWord = words[i]; }
+else if (words[i].length < longestWord.length){
+  longestWord = longestWord;
+} else if (words[i].length === longestWord.length){
+  console.log (longestWord, words[i]);
+  longestWord = longestWord;
 }
+  }
+find longestWord();
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
@@ -31,6 +36,7 @@ function sumNumbers(numbers) {
   return sum;
 }
 sumNumbers(numbers);
+console.log(sumNumbers);
 
 // Iteration #3.1 Bonus:
 function sum() {}
@@ -82,10 +88,11 @@ const wordsUnique = [
   'bring'
 ];
 
+var uniqueArray = [];
 function uniquifyArray(wordsUnique) {
   for (var i = 0; i < wordsUnique.length; i++) {
-    if (wordsUnique.indexOf(wordsUnique[i]) === -1) {
-      wordsUnique.push(wordsUnique[i]);
+    if (uniqueArray.indexOf(wordsUnique[i]) === -1) {
+      uniqueArray.push(wordsUnique[i]);
     }
   }
   if (wordsUnique.length === 0) {
@@ -94,6 +101,16 @@ function uniquifyArray(wordsUnique) {
   return uniqueArray;
 }
 uniquifyArray(wordsUnique);
+console.log(uniqueArray);
+
+
+
+
+
+
+
+
+
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
